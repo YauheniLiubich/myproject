@@ -33,8 +33,6 @@ class MyHandler(SimpleHTTPRequestHandler):
                 born = 'You were born in ' + str(year) + ' year'
             msg = f"""
                     Hello {name}!
-                    {self.path.split("?")}
-                    {path}   {qs}
                     {born}
                     Your path:  {path}
                 """
