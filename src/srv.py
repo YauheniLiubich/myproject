@@ -21,10 +21,11 @@ class MyHandler(SimpleHTTPRequestHandler):
         elif self.path.startswith("/hello"):
             path, qs = self.path.split("?")
             qs = parse_qs(qs)
-            if 'name' not in qs:
-                name = 'anonymous'
-            else:
-               name = qs["name"][0]
+          #  if 'name' not in qs:
+          #      name = 'anonymous'
+          #  else:
+          #     name = qs["name"][0]
+            name = 'anonimous' if 'name' not in qs else qs['name'][0]
             if 'age' not in qs:
                 born = ''
             else:
